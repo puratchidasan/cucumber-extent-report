@@ -46,7 +46,7 @@ public class WeatherId {
 
 	@Override
 	public String toString() {
-		return "[" + weatherKey + "]";
+		return weatherKey;
 	}
 
 }

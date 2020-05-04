@@ -76,7 +76,7 @@ public class WeatherStepDefinitions {
 		
 	for (WeatherId weatherKey : keyList) {
 			System.out.println("weatherKey:"+weatherKey);
-			request = given().param("query", weatherKey);
+			request = given().param("query", weatherKey.toString());
 			response = request.when().get(ENDPOINT_WEATHER_API);
 			json = response.then().statusCode(200);
 			System.out.println("response: " + response.prettyPrint());
