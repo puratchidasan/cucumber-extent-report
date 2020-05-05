@@ -1,4 +1,13 @@
-# cucumber-extent-report
-1. Cucumber
-2. Selenium
-3. Junit
+# <span style="color:blue;">***Cucumber Extent Reports***</span>
+| CUCUMBER | SELENIUM | TEST | APPLICATION | REPORTS |
+|-------|:---------|:---------|:---------|:---------|
+|https://www.markdownguide.org/basic-syntax/|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
+|A|B|C|D|E|
