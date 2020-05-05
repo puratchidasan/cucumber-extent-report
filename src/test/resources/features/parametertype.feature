@@ -1,3 +1,4 @@
+@parameter
 Feature: Parameter Conversion for Cucumber-JVM 4
 
   Scenario: No.1 Delimiter Annotation scenario

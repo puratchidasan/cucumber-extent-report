@@ -1,5 +1,7 @@
 package stepdefs;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -19,36 +21,22 @@ public class FacebookStepDefs  {
 
 	@Given("I enter the below details to create user account")
 	public void theMapLectureDetailsAre(Map<FBUserRow, FBUser> userMap) throws InterruptedException {
-		System.out.println("Testing....");
-		List<FBUserRow> keyList = userMap.keySet().stream().collect(Collectors.toList());
-
 		List<FBUser> valueList = userMap.values().stream().collect(Collectors.toList());
-
-		System.out.println(keyList.size());
-		System.out.println(valueList.size());
-
-		System.out.println(keyList);
-		System.out.println(valueList);
-		for (FBUser fbUser : valueList) {
-			
+		for (FBUser fbUser : valueList) {			
 			boolean success= testfbuser(fbUser);
-			
-			System.out.println(fbUser.getFirstName());
-			
-			System.out.println(fbUser.getSurName());
-			System.out.println(fbUser.getMobileNumber());
-			System.out.println(fbUser.getDay());
-			System.out.println(fbUser.getMonth());
-			System.out.println(fbUser.getYear());
-			System.out.println(fbUser.getGender());
+			assertTrue(success);
 		}
-
 	}
 
+	/**
+	 * 
+	 * @param fbUser
+	 * @return
+	 * @throws InterruptedException
+	 */
 	private boolean testfbuser(FBUser fbUser) throws InterruptedException {
-		// TODO Auto-generated method stub
 		
-		
+		boolean success= false;
 		driverFacade.start("https://www.facebook.com/");
 		driverFacade.findElement(By.xpath("//input[@name='firstname']")).sendKeys(fbUser.getFirstName());
 		driverFacade.findElement(By.xpath("//input[@name='lastname']")).sendKeys(fbUser.getSurName());
@@ -60,8 +48,9 @@ public class FacebookStepDefs  {
 		driverFacade.findElement(By.xpath("//input[@value='1']")).click();
 		Thread.sleep(3000);
 		driverFacade.findElement(By.xpath("//button[@name='websubmit']")).click();
+		success=true;
 		
-			return false;
+		return success;
 	}
 
 	@And("click on signup button")

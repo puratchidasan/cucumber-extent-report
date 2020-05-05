@@ -1,3 +1,4 @@
+@scenario_2
 Feature: Scenarios Two feature file
 
   Scenario: Scenario Number Two

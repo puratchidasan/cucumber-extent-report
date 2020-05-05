@@ -1,6 +1,6 @@
+@fbsignup
 Feature: Facebook signup 
 Scenario: User should create an account succesfully 
-	#Given Launch Facebook url for signup 
 	Given I enter the below details to create user account 
 		|   |firstName | surName |mobileNumber | password | day | month | year | gender |
 		| 1 |dummyname| noname  | 07455825656| dummy@123 	| 12  | Jan   | 2008 | Male |

@@ -1,4 +1,4 @@
-@ResponseAttributes 
+@validate_response
 Feature: City Weather API response 
 Scenario Outline: To ensure expected attributes and values are listed for the search city 
 	Given a weather exists with a city of <cityname> 

@@ -1,3 +1,4 @@
+@scenario_outline
 Feature: Scenario Outlines feature file
 
   Scenario Outline: Scenario Outline Row <row_num>
